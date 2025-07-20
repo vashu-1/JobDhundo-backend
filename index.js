@@ -25,10 +25,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 const corsOptions = {
-  origin: ["https://jobdhundo-frontend.onrender.com", "https://localhost:5173"], // Replace with your frontend URL
+  origin: "https://jobdhundo-frontend.onrender.com", // Replace with your frontend URL
   credentials: true, // Allow cookies to be sent
 };
 app.use(cors(corsOptions));
+
+app.options('*',cors());
 
 const PORT = process.env.PORT || 3000;
 
