@@ -25,10 +25,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 const corsOptions = {
-  origin: [
-    "http://localhost:5173",
-    "https://vercel.com/vijays-projects-2b8b3162/job-dhundo-frontend-pgc3/FokGFBFpwY1RiMfy9jamsc1NCdgA"
-  ], // Replace with your frontend URL
+  origin: "https://job-dhundo-frontend-pgc3.vercel.app", // Replace with your frontend URL
   credentials: true, // Allow cookies to be sent
 };
 app.use(cors(corsOptions));
